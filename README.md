@@ -6,11 +6,10 @@ Solución técnica para el ejercicio de Analista de Desarrollo. Este proyecto im
 # TECNOLOGIAS UTILIZADAS 
 
 BACKEND -> LARAVEL
-FRONTEND -> REACT
+FRONTEND -> REACT-START KIT LARAVEL
 BASE DE DATOS -> SQlite
-START KIT LARAVEL
-CHAT GPT
-CURSOR -> Errores, parte fronend 
+GEMINI -> Errores, bugs
+CURSOR -> Errores, Utilizacion para parte frond de la aplicacion
 
 # REQUISITOS FUNCIONALAES
 CRUD Completo de Libros
