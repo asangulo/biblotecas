@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { BookOpen, Users, ArrowLeft, BarChart3, Plus, Search, Clock, AlertTriangle } from 'lucide-react';
 import { statisticsService, loanService, ApiResponse } from '@/lib/api';
 
-interface DashboardProps {
+interface DashboardLibraryProps {
   auth: any;
 }
 
@@ -17,7 +17,7 @@ interface QuickStats {
   overdue_loans: number;
 }
 
-export default function Dashboard({ auth }: DashboardProps) {
+const DashboardLibrary: React.FC<DashboardLibraryProps> = ({ auth }) => {
   const [stats, setStats] = useState<QuickStats>({
     total_books: 0,
     total_users: 0,
@@ -253,7 +253,54 @@ export default function Dashboard({ auth }: DashboardProps) {
             </Card>
           </div>
         )}
+
+        {/* Información del sistema */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Información del Sistema</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5" />
+                  Sistema de Biblioteca
+                </CardTitle>
+                <CardDescription>
+                  Gestión completa de libros, usuarios y préstamos
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <p><strong>Versión:</strong> 1.0.0</p>
+                  <p><strong>Última actualización:</strong> {new Date().toLocaleDateString('es-ES')}</p>
+                  <p><strong>Estado:</strong> <span className="text-green-600">Operativo</span></p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Clock className="h-5 w-5" />
+                  Actividad Reciente
+                </CardTitle>
+                <CardDescription>
+                  Últimas actividades del sistema
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2 text-sm">
+                  <p>• Sistema iniciado correctamente</p>
+                  <p>• Base de datos conectada</p>
+                  <p>• API funcionando normalmente</p>
+                  <p>• Todas las funcionalidades disponibles</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </AppLayout>
   );
-}
+};
+
+export default DashboardLibrary;

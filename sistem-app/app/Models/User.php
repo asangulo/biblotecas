@@ -46,4 +46,33 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Relación con los préstamos
+     * Un usuario puede tener muchos préstamos
+     */
+    public function loans()
+    {
+        return $this->hasMany(Loan::class);
+    }
+
+    /**
+     * Scope para usuarios con préstamos activos
+     */
+    public function scopeWithActiveLoans($query)
+    {
+        return $query->whereHas('loans', function ($q) {
+            $q->active();
+        });
+    }
+
+    /**
+     * Scope para usuarios con préstamos vencidos
+     */
+    public function scopeWithOverdueLoans($query)
+    {
+        return $query->whereHas('loans', function ($q) {
+            $q->overdue();
+        });
+    }
 }
