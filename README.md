@@ -3,6 +3,7 @@
 # DESCRIPCION
 Solución técnica para el ejercicio de Analista de Desarrollo. Este proyecto implementa una API REST para la gestión de libros y préstamos, junto con un frontend para una interacción fluida e intuitiva.
 
+
 # TECNOLOGIAS UTILIZADAS 
 
 BACKEND -> LARAVEL
@@ -84,8 +85,16 @@ Total de usuarios que han solicitado al menos un préstamo en un periodo. Valor:
 
 # MANUAL BASICO
 
+USUARIO DE PRUEBA
+
+EMAIL: admin@test.com
+PASSWORD: password
+
+Dashboard: Vizualizacion modulos principales mas estadisticas basicas
+
 Libros: La vista principal permite visualizar el stock y utilizar un formulario para el CRUD completo.
 
 Préstamos: Se registra un préstamo seleccionando un libro disponible y un usuario de la base de datos.
 
 Devolución: La lista de préstamos activos permite marcar el ítem como devuelto, lo que actualiza el stock del libro.
+
