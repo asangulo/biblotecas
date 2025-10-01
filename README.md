@@ -1,5 +1,3 @@
-# biblotecas
-
 # SISTEMA DE BIBLOTECAS - PRUEBA TECNICA
 
 # DESCRIPCION
@@ -9,7 +7,10 @@ Solución técnica para el ejercicio de Analista de Desarrollo. Este proyecto im
 
 BACKEND -> LARAVEL
 FRONTEND -> REACT
-BASE DE DATOS -> MYSQL
+BASE DE DATOS -> SQlite
+START KIT LARAVEL
+CHAT GPT
+CURSOR -> Errores, parte fronend 
 
 # REQUISITOS FUNCIONALAES
 CRUD Completo de Libros
