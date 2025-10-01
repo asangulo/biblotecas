@@ -63,7 +63,7 @@ export default function Welcome() {
                                     <span>
                                         Read the
                                         <a
-                                            href="https://laravel.com/docs"
+                                            href="https://github.com/asangulo/biblotecas"
                                             target="_blank"
                                             className="ml-1 inline-flex items-center space-x-1 font-medium text-[#f53003] underline underline-offset-4 dark:text-[#FF4433]"
                                         >
@@ -83,7 +83,7 @@ export default function Welcome() {
                                                 />
                                             </svg>
                                         </a>
-                                    </span>
+                                    </span> 
                                 </li>
                                 <li className="relative flex items-center gap-4 py-2 before:absolute before:top-0 before:bottom-1/2 before:left-[0.4rem] before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A]">
                                     <span className="relative bg-white py-1 dark:bg-[#161615]">
@@ -120,7 +120,7 @@ export default function Welcome() {
                             <ul className="flex gap-3 text-sm leading-normal">
                                 <li>
                                     <a
-                                        href="https://cloud.laravel.com"
+                                        href="https://github.com/asangulo/biblotecas"
                                         target="_blank"
                                         className="inline-block rounded-sm border border-black bg-[#1b1b18] px-5 py-1.5 text-sm leading-normal text-white hover:border-black hover:bg-black dark:border-[#eeeeec] dark:bg-[#eeeeec] dark:text-[#1C1C1A] dark:hover:border-white dark:hover:bg-white"
                                     >

@@ -201,20 +201,6 @@ export default function Dashboard({ auth }: DashboardProps) {
               color="text-orange-600"
             />
             <QuickActionCard
-              title="Ver Préstamos"
-              description="Consultar y gestionar préstamos existentes"
-              icon={ArrowLeft}
-              href="/loans"
-              color="text-purple-600"
-            />
-            <QuickActionCard
-              title="Estadísticas"
-              description="Ver reportes y métricas del sistema"
-              icon={BarChart3}
-              href="/statistics"
-              color="text-indigo-600"
-            />
-            <QuickActionCard
               title="Buscar"
               description="Buscar libros, usuarios o préstamos"
               icon={Search}
