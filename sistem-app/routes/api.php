@@ -33,10 +33,10 @@ Route::prefix('libros')->group(function () {
     Route::get('/', [BookController::class, 'index']); // GET /api/libros - Listado de libros con estadísticas
     Route::post('/', [BookController::class, 'store']); // POST /api/libros - Crear nuevo libro
     Route::get('/search', [BookController::class, 'search']); // GET /api/libros/search - Buscar libros
+    Route::get('/disponibles', [BookController::class, 'disponibles']); // GET /api/libros/disponibles - Libros disponibles
     Route::get('/{id}', [BookController::class, 'show']); // GET /api/libros/{id} - Mostrar libro específico
     Route::put('/{id}', [BookController::class, 'update']); // PUT /api/libros/{id} - Actualizar libro
     Route::delete('/{id}', [BookController::class, 'destroy']); // DELETE /api/libros/{id} - Eliminar libro
-    Route::get('/search', [BookController::class, 'search']); // GET /api/libros/search - Buscar libros
 });
 
 /*
@@ -98,17 +98,6 @@ Route::prefix('prestamos')->group(function () {
     
 });
 
-// Rutas para libros disponibles
-Route::prefix('books')->group(function () {
-    Route::get('/disponibles', function (Request $request) {
-        return app(BookController::class)->search($request->merge(['disponible' => true]));
-    }); // GET /api/libros/disponibles - Libros disponibles para préstamo
-});
-/*
-|--------------------------------------------------------------------------
-| RUTAS DE SALUD DEL SISTEMA
-|--------------------------------------------------------------------------
-*/
 Route::get('/health', function () {
     return response()->json([
         'status' => 'OK',
