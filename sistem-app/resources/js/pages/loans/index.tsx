@@ -30,7 +30,7 @@ const LoansPage: React.FC<LoansPageProps> = ({ auth }) => {
   const [availableBooks, setAvailableBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedStatus, setSelectedStatus] = useState('');
+  const [selectedStatus, setSelectedStatus] = useState('todos');
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [formData, setFormData] = useState<LoanFormData>({
     user_id: 0,
@@ -41,7 +41,7 @@ const LoansPage: React.FC<LoansPageProps> = ({ auth }) => {
   });
 
   const statuses = [
-    { value: '', label: 'Todos' },
+    { value: 'todos', label: 'Todos' },
     { value: 'pendiente', label: 'Pendiente', color: 'bg-yellow-100 text-yellow-800' },
     { value: 'prestado', label: 'Prestado', color: 'bg-blue-100 text-blue-800' },
     { value: 'devolucion', label: 'Devuelto', color: 'bg-green-100 text-green-800' }
@@ -93,7 +93,7 @@ const LoansPage: React.FC<LoansPageProps> = ({ auth }) => {
       );
     }
 
-    if (selectedStatus) {
+    if (selectedStatus && selectedStatus !== 'todos') {
       filtered = filtered.filter(loan => loan.estado === selectedStatus);
     }
 
